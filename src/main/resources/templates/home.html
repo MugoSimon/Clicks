@@ -1,0 +1,17 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Approval Button</title>
+</head>
+<body>
+<h1>Approval Button</h1>
+<p>Click count: <span th:text="${approval.clickCount}"></span></p>
+<p>Approved by: <span th:text="${approval.approvedBy.size()}"></span> users</p>
+<form action="/approve" method="post">
+    <button th:style="${approval.approved ? 'background-color: green' : 'background-color: red'}" type="submit">
+        <span th:text="${approval.approved ? 'Approved' : 'Not Approved'}"></span>
+    </button>
+</form>
+</body>
+</html>
