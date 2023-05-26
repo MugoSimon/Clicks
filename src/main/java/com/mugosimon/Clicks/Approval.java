@@ -12,7 +12,7 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "tax_categories")
+@Table(name = "clicks")
 
 public class Approval {
     @Id
@@ -22,38 +22,6 @@ public class Approval {
     private int clickCount;
     private boolean approved;
     private Set<Long> approvedBy = new HashSet<>();
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public int getClickCount() {
-        return clickCount;
-    }
-
-    public void setClickCount(int clickCount) {
-        this.clickCount = clickCount;
-    }
-
-    public boolean isApproved() {
-        return approved;
-    }
-
-    public void setApproved(boolean approved) {
-        this.approved = approved;
-    }
-
-    public Set<Long> getApprovedBy() {
-        return approvedBy;
-    }
-
-    public void setApprovedBy(Set<Long> approvedBy) {
-        this.approvedBy = approvedBy;
-    }
 
     // Constructors, getters, and setters
 }

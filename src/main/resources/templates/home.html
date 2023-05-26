@@ -1,4 +1,3 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -6,11 +5,11 @@
 </head>
 <body>
 <h1>Approval Button</h1>
-<p>Click count: <span th:text="${approval.clickCount}"></span></p>
-<p>Approved by: <span th:text="${approval.approvedBy.size()}"></span> users</p>
-<form action="/approve" method="post">
-    <button th:style="${approval.approved ? 'background-color: green' : 'background-color: red'}" type="submit">
-        <span th:text="${approval.approved ? 'Approved' : 'Not Approved'}"></span>
+<p>Click Count: <span th:text="${approval.clickCount}"></span></p>
+<p>Approved By: <span th:text="${#lists.size(approval.approvedBy)}"></span></p>
+<form action="/approve" method="POST">
+    <button th:disabled="${approval.approved}" type="submit">
+        <span th:text="${approval.approved ? 'Approved' : 'Approve'}"></span>
     </button>
 </form>
 </body>

@@ -1,10 +1,7 @@
 package com.mugosimon.Clicks;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-@Service
-public class ApprovalService {
+//@Service
+/*public class ApprovalService {
     private final ApprovalRepository approvalRepository;
 
     @Autowired
@@ -27,5 +24,11 @@ public class ApprovalService {
 
         approvalRepository.save(approval);
     }
+}*/
+
+public interface ApprovalService {
+    Approval getApproval();
+
+    void approveButton(Long userId);
 }
 
