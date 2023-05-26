@@ -15,9 +15,14 @@
     <!--<button th:disabled="${approval.approved}" type="submit">
         <span th:text="${approval.approved ? 'Approved' : 'Approve'}"></span>
     </button>-->
-    <button class="btn btn-primary" th:disabled="${approval.approved}" type="submit">
+    <!--<button class="btn btn-primary" th:disabled="${approval.approved}" type="submit">
+        <span th:text="${approval.approved ? 'Approved' : 'Approve'}"></span>
+    </button>-->
+    <button class="btn btn-primary" th:classappend="${#lists.size(approval.approvedBy) >= 2 ? 'green' : 'red'}"
+            th:disabled="${approval.approved}" type="submit">
         <span th:text="${approval.approved ? 'Approved' : 'Approve'}"></span>
     </button>
+
 </form>
 
 <script crossorigin="anonymous"

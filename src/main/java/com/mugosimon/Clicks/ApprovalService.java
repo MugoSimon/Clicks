@@ -1,6 +1,8 @@
 package com.mugosimon.Clicks;
 
-//@Service
+import org.springframework.stereotype.Service;
+
+@Service
 /*public class ApprovalService {
     private final ApprovalRepository approvalRepository;
 
